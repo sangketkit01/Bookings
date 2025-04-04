@@ -1,0 +1,18 @@
+mode: set
+github.com/sangketkit01/bookings/internal/forms/errors.go:6.44,8.2 1 1
+github.com/sangketkit01/bookings/internal/forms/errors.go:11.42,13.18 2 1
+github.com/sangketkit01/bookings/internal/forms/errors.go:13.18,15.3 1 1
+github.com/sangketkit01/bookings/internal/forms/errors.go:17.2,17.14 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:16.29,18.2 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:21.33,26.2 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:29.43,30.31 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:30.31,32.37 2 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:32.37,34.4 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:39.39,41.13 2 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:41.13,44.3 2 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:46.2,46.13 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:50.57,52.21 2 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:52.21,55.3 2 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:57.2,57.13 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:61.37,62.39 1 1
+github.com/sangketkit01/bookings/internal/forms/forms.go:62.39,64.3 1 1

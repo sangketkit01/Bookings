@@ -1,0 +1,22 @@
+mode: set
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:19.55,23.2 1 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:25.33,27.2 1 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:29.67,33.2 3 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:35.68,51.2 8 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:53.74,62.2 4 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:65.78,67.16 2 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:67.16,70.3 2 0
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:72.2,84.19 6 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:84.19,93.3 4 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:95.2,96.66 2 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:99.71,101.2 1 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:103.69,105.2 1 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:107.81,109.2 1 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:111.86,113.2 0 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:120.85,127.16 3 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:127.16,129.3 1 0
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:131.2,133.14 3 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:137.70,139.2 1 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:141.81,143.8 2 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:143.8,148.3 4 1
+github.com/sangketkit01/bookings/internal/handlers/handlers.go:150.2,156.4 4 0

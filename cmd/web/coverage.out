@@ -1,0 +1,11 @@
+mode: set
+github.com/sangketkit01/bookings/cmd/web/main.go:22.13,24.15 2 0
+github.com/sangketkit01/bookings/cmd/web/main.go:24.15,26.3 1 0
+github.com/sangketkit01/bookings/cmd/web/main.go:28.2,34.16 3 0
+github.com/sangketkit01/bookings/cmd/web/main.go:34.16,36.3 1 0
+github.com/sangketkit01/bookings/cmd/web/main.go:39.17,55.16 10 1
+github.com/sangketkit01/bookings/cmd/web/main.go:55.16,58.3 2 0
+github.com/sangketkit01/bookings/cmd/web/main.go:60.2,70.12 7 1
+github.com/sangketkit01/bookings/cmd/web/middleware.go:9.45,20.2 3 1
+github.com/sangketkit01/bookings/cmd/web/middleware.go:23.50,25.2 1 1
+github.com/sangketkit01/bookings/cmd/web/route.go:11.48,36.2 18 1
