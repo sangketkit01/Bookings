@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"testing"
 	"time"
 
 	"github.com/alexedwards/scs/v2"
@@ -15,7 +16,6 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/justinas/nosurf"
 	"github.com/sangketkit01/bookings/internal/config"
-	"github.com/sangketkit01/bookings/internal/driver"
 	"github.com/sangketkit01/bookings/internal/models"
 	"github.com/sangketkit01/bookings/internal/render"
 )
@@ -25,7 +25,7 @@ var session *scs.SessionManager
 var pathToTemplates = "../../templates"
 var functions = template.FuncMap{}
 
-func getRoutes() http.Handler{
+func TestMain(m *testing.M){
 	// What am I going to put in the session
 	gob.Register(models.Reservation{})
 
@@ -39,11 +39,12 @@ func getRoutes() http.Handler{
 	session.Cookie.Secure = app.InProduction
 
 	app.Session = session
-	log.Println("Connecting to database...")
-	db, err := driver.ConnectSQL("host=localhost port=5432 dbname=bookings user=postgres password=0627457454New")
-	if err != nil{
-		log.Fatal("Cannot connect to the database! Dying...")
-	}
+
+	mailChan := make(chan models.MailData)
+	app.MailChan = mailChan
+	defer close(app.MailChan)
+
+	listenForMail()
 
 	infoLog := log.New(os.Stdout, "INFO\t",log.Ldate|log.Ltime)
 	app.InfoLog = infoLog
@@ -59,11 +60,23 @@ func getRoutes() http.Handler{
 	app.TemplateCache = tc
 	app.UseCache = true
 
-	repo := NewRepository(&app,db)
+	repo := NewTestRepo(&app)
 	NewHandlers(repo)
 
 	render.NewRenderer(&app)
 
+	os.Exit(m.Run())
+}
+
+func listenForMail(){
+	go func(){
+		for{
+			_ = <- app.MailChan
+		}
+	}()
+}
+
+func getRoutes() http.Handler{
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)

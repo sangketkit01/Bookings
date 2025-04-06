@@ -32,6 +32,9 @@ func main() {
 
 	defer db.SQL.Close()
 
+	defer close(app.MailChan)
+	listenForMail()
+
 	server := &http.Server{
 		Addr:    portNumber,
 		Handler: route(&app),
@@ -50,6 +53,10 @@ func run() (*driver.DB,error){
 	gob.Register(models.Room{})
 	gob.Register(models.Restriction{})
 	gob.Register(models.RoomRestriction{})
+	gob.Register(map[string]int{})
+
+	mailChan := make(chan models.MailData)
+	app.MailChan = mailChan
 
 	//Change this to true when in production
 	app.InProduction = false
@@ -80,7 +87,7 @@ func run() (*driver.DB,error){
 
 	tc, err := render.CreateTemplateCache()
 	if err != nil {
-		log.Fatalln("cannot create template cache")
+		log.Fatalln("cannot create template cache", err)
 		return nil, err
 	}
 

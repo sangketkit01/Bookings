@@ -75,6 +75,23 @@
                     <a class="nav-link" href="/contact">Contact</a>
                 </li>
 
+                {{if eq .IsAuthenticated 1}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/admin/dashboard">Dashboard</a>
+                            <a class="dropdown-item" href="/user/logout">Logout</a>
+                        </div>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/login">Login</a>
+                    </li>
+                {{end}}
+
             </ul>
         </div>
     </nav>
@@ -134,17 +151,16 @@
         }
         
         {{with .Error}}
-            notify("{{.}}","Error")
+            notify("{{.}}","error")
         {{end}}
 
         {{with .Flash}}
-            notify("{{.}}","Flash")
+            notify("{{.}}","success")
         {{end}}
 
         {{with .Warning}}
-            notify("{{.}}","Warning")
+            notify("{{.}}","warning")
         {{end}}
-
     </script>
 
     </body>
