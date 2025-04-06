@@ -2,3 +2,4 @@
 database.yml
 .env
 HTML
+stat/admin/*
